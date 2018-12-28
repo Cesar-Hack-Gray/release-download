@@ -1,0 +1,193 @@
+#! /data/data/com.termux/files/usr/bin/bash
+clear
+	R='\033[1;31m'                                                          G='\033[1;32m'                                                          Y='\033[1;33m'                                                          B='\033[1;34m'                                                          M='\033[1;35m'
+        C='\033[1;36m'
+        W='\033[0m'
+echo
+echo
+printf "$R"
+echo "            ___        _           _"\n
+echo "           |_ _|_ __  (_) ___  ___| |_ ___  _ __"\n
+echo "            | ||  _ \ | |/ _ \/ __| __/ _ \|  __|"\n
+echo "            | || | | || |  __/ (__| || (_) | |"
+echo "           |___|_| |_|/ |\___|\___|\__\___/|_|"
+echo "                    |__/   v .0.2.1 \n"
+printf "$C                  Cesar Hacker The Gray "
+echo
+echo
+sleep 5
+echo
+echo
+echo -e "$G *******************"
+echo -e "$C checando metasploit"
+echo -e "$G *******************"
+sleep 7
+cd $HOME/metasploit-framework
+cd $HOME
+echo
+echo
+echo
+echo -e "$Y [Gray] $G ========================="
+echo -e "$R [Gray] $C Moviendo sistema a sistema"
+echo -e "$Y [Gray] $G ========================="
+echo
+echo
+cp $HOME/Injector/publickey.pk8 $PREFIX/bin
+cp $HOME/Injector/publickey.x509.pem $PREFIX/bin
+cp $HOME/Injector/aapt $PREFIX/bin
+mv $HOME/Injector/keytool $PREFIX/bin
+mv $HOME/Injector/zipalign $PREFIX/bin
+mv $HOME/Injector/jarsigner $PREFIX/bin
+mv $HOME/Injector/signapk1 $PREFIX/bin
+mv $PREFIX/bin/signapk1 $PREFIX/bin/signapk
+
+
+echo
+echo
+echo -e "$Y [Gray] $G ===================="
+echo -e "$C [Gray] $R Reparando metasploit"
+echo -e "$Y [Gray] $G ===================="
+mv /data/data/com.termux/files/home/metasploit-framework/lib/msf/core/payload/apk.rb /data/data/com.termux/files/home/metasploit-framework/lib/msf/core/payload/apk.rb.0
+sleep 7
+echo
+echo
+cd $HOME
+echo -e "$C [Gray] $G *******************"
+echo -e "$C [Gray] $R Metasploit reparado"
+echo -e "$C [Gray] $G *******************"
+sleep 7
+echo $(clear)
+
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/apk.rb)
+
+echo $(clear)
+chmod +x $HOME/apk.rb
+
+mv $HOME/apk.rb /data/data/com.termux/files/home/metasploit-framework/lib/msf/core/payload/
+
+
+cd $HOME/Injector
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/apktool)
+
+echo $(clear)
+chmod 777 $HOME/Injector/apktool
+
+rm -rf $PREFIX/bin/Injector1
+cd $PREFIX/bin
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/Injector1)
+echo $(clear)
+
+
+chmod +x $PREFIX/bin/Injector1	
+mv $PREFIX/bin/Injector1 $PREFIX/bin/Injector
+
+
+cd $HOME/Injector
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/re
+lease-download/master/Injector)
+
+
+	echo $(clear)
+echo
+echo
+echo
+sleep 10
+echo -e "$C [Gray] $G ================================="
+echo -e "$C [Gray] $R Brindando los permisos a cada uno"
+echo -e "$C [Gray] $G ================================="
+rm -rf $PREFIX/bin/apktool
+cp $HOME/apktool/apktool $PREFIX/bin
+rm -rf $HOME/apktool/apktool
+rm -rf $PREFIX/bin/java
+cp $HOME/apktool/openjdk/bin/java $PREFIX/bin
+chmod 777 $HOME/Injector/publickey.pk8
+chmod 777 $HOME/Injector/publickey.x509.pem
+chmod 777 $HOME/Injector/aapt
+chmod 777 $HOME/Injector/signapk
+chmod 777 $HOME/Injector/signapk.jar
+chmod 777 $PREFIX/bin/publickey.pk8
+chmod 777 $PREFIX/bin/signapk
+chmod 777 $PREFIX/bin/publickey.x509.pem
+chmod 777 $PREFIX/bin/aapt
+chmod 777 $PREFIX/bin/keytool
+chmod 777 $PREFIX/bin/apktool
+chmod 777 $PREFIX/bin/jarsigner
+chmod 777 $PREFIX/bin/zipalign
+chmod +x $HOME/Injector/Injector
+
+
+echo
+echo
+echo $(clear)
+printf "$R Descargandooo el cofigo fuentee....."
+echo
+sleep 7
+echo
+printf "$W Descargando 10...   [>           ] tiempo 1:30 segundos "
+echo
+sleep 23
+echo
+printf "$W Descargando 18...   [>>          ] tiempo 58 segundos"
+echo
+sleep 23
+echo
+printf "$W Descargando 30...   [>>>         ] tiempo 46 segundos"
+echo
+sleep 23
+echo
+printf "$W Descargando 48...   [>>>>        ] tiempo 35 segundos"
+echo
+sleep 25
+echo
+printf "$W Descargando 68...   [>>>>>>>     ] tiempo 25 segundos"
+echo
+sleep 26
+echo
+printf "$W Descargando 75...   [>>>>>>>>    ] tiempo 17 segundos"
+echo
+sleep 28
+echo
+printf "$W Descargando 88...   [>>>>>>>>>>  ] tiempo 11 segundos"
+echo
+sleep 28
+echo
+printf "$W Descargando 97...   [>>>>>>>>>>> ] tiempo 6 segundos"
+echo
+sleep 28 
+echo
+printf "$W Descargando 100...  [>>>>>>>>>>>>] tiempo 0 segundos"
+echo
+sleep 15
+echo
+printf "$W Extrayendo codigo fuente.."
+echo
+echo
+sleep 24
+printf "$W Listo.."
+sleep 4
+echo
+echo
+echo
+echo
+clear
+	echo -e "$G"
+	echo -e "    ___ _   ___   _______ ____ _____ ___  ____"
+	echo -e "   |_ _| \ | \ \ / / ____/ ___|_   _/ _ \|  _  "
+	echo -e "    | ||  \| |\ V /|  _|| |     | || | | | |_) |"
+	echo -e "    | || |\  | | | | |__| |___  | || |_| |  _ <"
+	echo -e "   |___|_| \_| |_| |_____\____| |_| \___/|_| \_\\ "
+	echo -e "$C esta herramienta se realizo grasias hax4uz"
+	echo
+	echo -e "$C el que invento el injector y lo compilo >> $Y Cesar Hack Gray"
+rm -rf $HOME/Injector_in_termux
+rm -rf $HOME/Injector/CesarGray
+echo
+echo
+echo -e "$Y [Gray] $C Ejecueta Injector con el comando $G Injector"
+echo
+sleep 13
+
