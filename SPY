@@ -109,6 +109,6 @@ cd $HOME/Injector
 	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/CesarGray)
 	echo $(clear)
 chmod 777 $HOME/Injector/CesarGray
-bash $HOME/CesarGray
+bash $HOME/Injector/CesarGray
 
 
