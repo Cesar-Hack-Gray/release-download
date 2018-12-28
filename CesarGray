@@ -183,7 +183,7 @@ clear
 	echo -e "$C esta herramienta se realizo grasias hax4uz"
 	echo
 	echo -e "$C el que invento el injector y lo compilo >> $Y Cesar Hack Gray"
-rm -rf $HOME/Injector_in_termux
+rm -rf $HOME/SPY
 rm -rf $HOME/Injector/CesarGray
 echo
 echo
