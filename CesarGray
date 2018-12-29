@@ -35,7 +35,6 @@ echo
 cp $HOME/Injector/publickey.pk8 $PREFIX/bin
 cp $HOME/Injector/publickey.x509.pem $PREFIX/bin
 cp $HOME/Injector/aapt $PREFIX/bin
-mv $HOME/Injector/keytool $PREFIX/bin
 mv $HOME/Injector/zipalign $PREFIX/bin
 mv $HOME/Injector/jarsigner $PREFIX/bin
 mv $HOME/Injector/signapk1 $PREFIX/bin
@@ -113,7 +112,6 @@ chmod 777 $PREFIX/bin/publickey.pk8
 chmod 777 $PREFIX/bin/signapk
 chmod 777 $PREFIX/bin/publickey.x509.pem
 chmod 777 $PREFIX/bin/aapt
-chmod 777 $PREFIX/bin/keytool
 chmod 777 $PREFIX/bin/apktool
 chmod 777 $PREFIX/bin/jarsigner
 chmod 777 $PREFIX/bin/zipalign
