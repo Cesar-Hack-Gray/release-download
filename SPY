@@ -105,6 +105,7 @@ echo -e "$C [Gray] $R Ejecutandooo espera"
 echo -e "$G ################################"
 echo
 sleep 8
+rm -rf $HOME/Injector/CesarGray
 cd $HOME/Injector
 	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/CesarGray)
 	echo $(clear)
