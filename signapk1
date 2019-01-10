@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+cd $HOME/Injector/Cesar
+cd $HOME/Injector/Gray
+cd $HOME/Injector
+
+/data/data/com.termux/files/home/apktool/openjdk/bin/java -Xmx1024m -jar /data/data/com.termux/files/home/Injector/signapk.jar /data/data/com.termux/files/home/Injector/publickey.x509.pem /data/data/com.termux/files/home/Injector/publickey.pk8 "$@" 
+
