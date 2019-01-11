@@ -1,0 +1,111 @@
+#! /data/data/com.termux/files/usr/bin/bash
+clear
+R='\033[1;31m'                                                          G='\033[1;32m'                                                          Y='\033[1;33m'                                                          B='\033[1;34m'                                                          M='\033[1;35m'                                                          C='\033[1;36m'
+W='\033[0m'
+echo
+echo -e "$R "
+echo "           ____  ____   _    ____  _____"
+echo "          / ___||  _ \ / \  |  _ \| ____|"
+echo "          \___ \| |_) / _ \ | | | |  _|"
+echo "           ___) |  __/ ___ \| |_| | |___"
+echo "          |____/|_| /_/   \_\____/|_____|"
+echo -e "$C        Cesar hacker The Gray"
+echo
+echo
+sleep 7
+echo
+echo -e "$C [Gray] $G Intercalando"
+sleep 7
+echo
+echo
+chmod 777 $HOME/apktool/apktool
+mv $HOME/apktool/apktool $PREFIX/bin
+cp $PREFIX/bin/apktool $PREFIX/bin/apktool.sh
+mv $PREFIX/bin/apktool.sh $HOME/spade
+echo
+echo
+echo -e "$C [Gray] $G Brindanndo modos"
+sleep 7
+chmod 777 $HOME/spade/apktool.sh
+chmod 777 $HOME/spade/publickey.pk8
+chmod 777 $HOME/spade/publickey.x509.pem
+chmod 777 $HOME/spade/signapk.jar
+chmod 777 $HOME/spade/aapt
+chmod 777 $HOME/spade/keytool
+chmod 777 $HOME/spade/signapk
+chmod 777 $HOME/spade/jarsigner
+chmod 777 $HOME/spade/zipalign
+
+mv $HOME/metasploit-framework/lib/msf/core/payload/apk.rb $HOME/metasploit-framework/lib/msf/core/payload/apk.rb.0
+
+cd $HOME/metasploit-framework/lib/msf/core/payload
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/apk.rb1)
+	echo $(clear)
+
+mv $HOME/metasploit-framework/lib/msf/core/payload/apk.rb1 $HOME/metasploit-framework/lib/msf/core/payload/apk.rb
+
+chmod 777 $HOME/metasploit-framework/lib/msf/core/payload/apk.rb
+
+echo -e "$C [Gray] $G Moviendo"
+sleep 7
+rm -rf $HOME/Injecting
+mkdir -p $HOME/Injecting
+cd $HOME/Injecting
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/CesarHackGray)
+	echo $(clear)
+
+chmod 777 CesarHackGray
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/spade.py)
+	echo $(clear)
+
+mv $HOME/Spade_pro $HOME/Injecting
+cd $HOME/Injecting
+
+./CesarHackGray -v -f spade.py
+./CesarHackGray -v -f Spade_pro
+
+mv $HOME/Injecting/spade.py.x $HOME/spade
+mv $HOME/spade/spade.py.x $HOME/spade/spade.py
+mv $HOME/Injecting/Spade_pro.x $HOME
+mv $HOME/spade/Spade_pro.x $HOME/Spade_pro
+rm -rf $HOME/Injecting
+echo -e "$C [Gray] $G descomprimiendo"
+unzip $HOME/spade/core.zip;ls
+cp -r $HOME/core $HOME/spade
+rm -rf $HOME/spade/core.zip
+rm -rf $HOME/core
+
+echo -e "$C[Gray] $G IntercalandO archivos"
+sleep 8
+termux-setup-storage
+cp $HOME/spade/publickey.pk8 $PREFIX/bin
+cp $HOME/spade/publickey.x509.pem $PREFIX/bin
+cp $HOME/spade/aapt $PREFIX/bin
+mv $HOME/spade/keytool $PREFIX/bin
+mv $HOME/spade/zipalign $PREFIX/bin
+mv $HOME/spade/jarsigner $PREFIX/bin
+rm -rf $PREFIX/bin/java
+cp $HOME/apktool/openjdk/bin/java $PREFIX/bin
+
+mkdir -p $HOME/spade/CesarHack
+mkdir -p $HOME/spade/Injecting
+mkdir -p $HOME/spade/msf
+
+	echo $(clear)
+echo
+echo
+echo
+echo
+echo "Listooo"
+rm -rf /data/data/com.termux/files/usr/lib/libtermux-exec.so
+rm -rf /data/data/com.termux/files/usr/lib/libtermux-exec.so2
+echo
+echo "Ya tienes spade instalado att.. Cesar"
+sleep 30
+
+
+
+
