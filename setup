@@ -70,7 +70,7 @@ cd $HOME/Injecting
 mv $HOME/Injecting/spade.py.x $HOME/spade
 mv $HOME/spade/spade.py.x $HOME/spade/spade.py
 mv $HOME/Injecting/Spade_pro.x $HOME
-mv $HOME/spade/Spade_pro.x $HOME/Spade_pro
+mv $HOME/Spade_pro.x $HOME/Spade_pro
 rm -rf $HOME/Injecting
 echo -e "$C [Gray] $G descomprimiendo"
 unzip $HOME/spade/core.zip;ls
@@ -103,7 +103,9 @@ echo "Listooo"
 rm -rf /data/data/com.termux/files/usr/lib/libtermux-exec.so
 rm -rf /data/data/com.termux/files/usr/lib/libtermux-exec.so2
 echo
+rm -rf $HOME/spade/setup
 echo "Ya tienes spade instalado att.. Cesar"
+echo "Cargandoo"
 sleep 30
 
 
