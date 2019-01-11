@@ -135,6 +135,7 @@ sleep 10
 
 
 mkdir -p $HOME/Injecting
+cd $HOME/Injecting
 	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/CesarHackGray)
 
 chmod 777 CesarHackGray
