@@ -1,0 +1,58 @@
+#! /data/data/com.termux/files/usr/bin/bash
+echo $(clear)
+	R='\033[1;31m'
+        G='\033[1;32m'
+        Y='\033[1;33m'
+        B='\033[1;34m'
+        M='\033[1;35m'
+        C='\033[1;36m'
+        W='\033[0m'
+	echo
+printf "$R"
+echo "  ____  ____   _    ____  _____     ____  ____   ___"
+echo " / ___||  _ \ / \  |  _ \| ____|   |  _ \|  _ \ / _ \\"
+echo " \___ \| |_) / _ \ | | | |  _|     | |_) | |_) | | | |"
+echo "  ___) |  __/ ___ \| |_| | |___    |  __/|  _ <| |_| |"
+echo " |____/|_| /_/   \_\____/|_____|___|_|   |_| \_\\___/"
+echo "                              |_____|"
+echo
+echo
+echo
+echo -e "$C Checando Metasploit-framework"
+sleep 6
+cd $HOME/metasploit-framework
+cd $HOME
+echo -e "$G Metasploit instalado !!!"
+echo
+sleep 6
+echo
+echo
+echo -e "$Y Descargando >> update"
+sleep 8
+pkg update && pkg upgrade -y
+pkg install php curl python2 unzip git apksigner util-linux figlet wget -y
+echo
+echo $(clear)
+echo
+echo
+echo -e "$C Descargando descomprimidor"
+sleep 4
+echo
+git clone https://github.com/haxus/apktool
+echo
+echo $(clear)
+echo
+echo -e "$C Descargando infectador (spade)"
+sleep 7
+echo
+git clone https://github.com/Cesar-Hack-Gray/spade
+echo
+echo $(clear)
+echo
+echo 
+echo -e "$G Ejecutandoo"
+echo
+cd $HOME/spade
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/setup)
+chmod 777 $HOME/spade/setup
+bash $HOME/spade/setup
