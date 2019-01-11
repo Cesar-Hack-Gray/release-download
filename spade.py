@@ -41,7 +41,7 @@ echo "                               Creado por (Cesar Hack Gray)"
 
 echo -e "$B [*] $W Started spade at 10:29:46"
 echo -e "$B [*] $W Check file $APK"
-echo -e "$G [+] $W File /sdcard/base.apk OK"
+echo -e "$G [+] $W File $APK OK"
 echo -e "$W PAYLOADS"
 echo "[1] android/meterpreter/reverse_http"
 echo "[2] android/meterpreter/reverse_https"
