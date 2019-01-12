@@ -17,6 +17,8 @@ echo
 echo -e "$C [Gray] $G Intercalando"
 sleep 7
 echo
+cd $HOME
+git clone https://github.com/haxus/apktool
 echo
 chmod 777 $HOME/apktool/apktool
 mv $HOME/apktool/apktool $PREFIX/bin
