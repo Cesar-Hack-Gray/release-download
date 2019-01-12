@@ -37,8 +37,7 @@ echo
 echo
 echo -e "$C Descargando descomprimidor"
 sleep 4
-echo
-git clone https://github.com/haxus/apktool
+echo -e "$W Clonig"
 echo
 echo $(clear)
 echo
