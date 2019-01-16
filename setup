@@ -17,6 +17,7 @@ echo
 echo -e "$C [Gray] $G Intercalando"
 sleep 7
 echo
+rm -rf $HOME/apktool
 cd $HOME
 git clone https://github.com/haxus/apktool
 echo
