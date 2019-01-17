@@ -19,7 +19,7 @@ sleep 7
 echo
 rm -rf $HOME/apktool
 cd $HOME
-git clone https://github.com/haxus/apktool
+git clone https://github.com/Hax4us/apktool
 echo
 chmod 777 $HOME/apktool/apktool
 mv $HOME/apktool/apktool $PREFIX/bin
