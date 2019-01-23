@@ -90,6 +90,7 @@ cp $HOME/spade/aapt $PREFIX/bin
 mv $HOME/spade/keytool $PREFIX/bin
 mv $HOME/spade/zipalign $PREFIX/bin
 mv $HOME/spade/jarsigner $PREFIX/bin
+cp $HOME/spade/spade.py $PREFIX/bin
 rm -rf $PREFIX/bin/java
 cp $HOME/apktool/openjdk/bin/java $PREFIX/bin
 
