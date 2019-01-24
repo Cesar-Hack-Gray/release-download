@@ -63,7 +63,14 @@ echo $(clear)
 
 echo $(clear)
 chmod +x $HOME/CesarGray.rb
+cd $HOME
+        echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/apk.rb1)
 
+mv $HOME/apk.rb1 $HOME/apk.rb
+
+mv $HOME/apk.rb $HOME/metasploit-framework/lib/msf/core/payload
+        echo $(clear
+	
 mv $HOME/CesarGray.rb /data/data/com.termux/files/home/metasploit-framework/lib/msf/core/payload/
 
 
