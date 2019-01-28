@@ -10,7 +10,7 @@ echo "| |_____ |   |_| ||       || | |   ||   |___                            |_
 echo " _____| ||   |    |   _   ||       ||   |___"
 echo "|_______||___|    |__| |__||______| |_______|"
 setterm -foreground yellow
-echo "                               Creado por (Cesar Hack Gray)"
+echo "                              Recompilado por (Cesar Hack Gray)"
 echo
 echo -e "$B[*] $W Started spade at 10:20:17"
 echo -e "$Y[!] $W Argument missing"
@@ -41,7 +41,7 @@ echo "|_____  ||    ___||       || |_|   ||    ___|"
 echo " _____| ||   |    |   _   ||       ||   |___"
 echo "|_______||___|    |__| |__||______| |_______|"
 setterm -foreground yellow
-echo "                               Creado por (Cesar Hack Gray)"
+echo "                             Recompilado por (Cesar Hack Gray)"
 
 echo -e "$B [*] $W Started spade at 10:29:46"
 echo -e "$B [*] $W Check file $APK"
