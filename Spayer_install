@@ -1,0 +1,266 @@
+#!/data/data/com.termux/files/usr/bin/bash
+	R='\033[1;31m'
+        G='\033[1;32m'
+        Y='\033[1;33m'
+        B='\033[1;34m'
+        M='\033[1;35m'
+        C='\033[1;36m'
+        W='\033[0m'
+	echo $(clear)
+	echo
+	echo
+	echo
+	echo "           ____"
+	echo "          / ___| _ __   __ _ _   _  ___ _ __"
+	echo "          \___ \|  _ \ / _  | | | |/ _ \  __|"
+	echo "           ___) | |_) | (_| | |_| |  __/ |"
+	echo "          |____/| .__/ \__ _|\__  |\___|_|"
+	echo "                |_|          |___/"
+	echo -e "$Y         Cesar Hacker The Gray"
+	echo
+	echo
+	echo
+	sleep 5
+	echo -e "$G #######################"
+	echo -e "$C Descargando aapt"
+	echo -e "$G ######################"
+	echo
+
+	rm -rf $HOME/apktool
+	git clone https://github.com/hax4us/apktool
+
+	echo
+	echo $(clear)
+	echo
+	sleep 3
+	echo -e "$G ¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?"
+	echo -e "$C Creando Carpetas"
+	echo -e "$G ?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿?¿"
+	sleep 7
+
+
+
+mkdir -p $HOME/Spayer/PHP
+mkdir -p $HOME/Spayer/handler
+mkdir -p $HOME/Spayer/Cesar
+mkdir -p $HOME/Spayer/César
+mkdir -p $HOME/Spayer/exe
+mkdir -p $HOME/Spayer/apk
+mkdir -p $HOME/Spayer/originales
+mkdir -p $HOME/Spayer/PAYLOAD
+mkdir -p $HOME/Spayer/Gray
+
+
+
+
+
+	echo
+	echo $(clear)
+	echo
+	sleep 2
+	echo -e "$G ×××××××××××××××××××××××÷××××××"
+	echo -e "$C Brindando los modos a cada uno"
+	echo -e "$G ××××××××××××××××××××××××××××××"
+	echo
+	sleep 6
+
+
+chmod 777 $HOME/Spayer/aapt
+chmod 777 $HOME/Spayer/keytool
+chmod 777 $HOME/Spayer/signapk
+chmod 777 $HOME/Spayer/jarsigner
+chmod 777 $HOME/Spayer/zipalign
+chmod 777 $HOME/Spayer/signapk.jar
+chmod 777 $HOME/Spayer/publickey.pk8
+chmod 777 $HOME/Spayer/publickey.x509.pem
+
+
+	echo $(clear)
+	echo
+	echo
+	echo -e "$G ========================"
+	echo -e "$C Moviendo archivos a bin"
+	echo -e "$G ========================"
+	echo
+	sleep 4
+
+rm -rf $PREFIX/bin/keytool
+rm -rf $PREFIX/bin/publickey.pk8
+rm -rf $PREFIX/bin/publickey.x509.pem
+rm -rf $PREFIX/bin/Spayer
+
+mv $HOME/Spayer/keytool $PREFIX/bin
+mv $HOME/Spayer/jarsigner $PREFIX/bin
+mv $HOME/Spayer/zipalign $PREFIX/bin
+cp $HOME/Spayer/publickey.pk8 $PREFIX/bin
+cp $HOME/Spayer/publickey.x509.pem $PREFIX/bin
+cp $HOME/Spayer/aapt $PREFIX/bin
+
+rm -rf $PREFIX/bin/apktool
+rm -rf $PREFIX/bin/java
+cp $HOME/apktool/openjdk/bin/java $PREFIX/bin
+cp $HOME/apktool/apktool $PREFIX/bin
+	
+
+	echo $(clear)
+	echo
+	echo
+	sleep 2
+	echo -e "$G #*#*#*#*#*#*#*#*#*#*#"
+	echo -e "$C Creando signapk"
+	echo -e "$G #*#*#*#*#*#*#*#*#*#*#"
+	echo
+	sleep 4
+
+
+touch $HOME/Spayer/signapk
+echo "#!/data/data/com.termux/files/usr/bin/bash" >> $HOME/Spayer/signapk
+echo "/data/data/com.termux/files/home/apktool/openjdk/bin/java -Xmx1024m -jar /data/data/com.termux/files/home/Spayer/signapk.jar /data/data/com.termux/files/home/Spayer/publickey.x509.pem /data/data/com.termux/files/home/Spayer/publickey.pk8 "$@"" >> $HOME/Spayer/signapk
+
+
+
+
+
+	echo
+	sleep 2
+	echo -e "$G @@@@@@@@@@@@@@@@@@@@@@"
+	echo -e "$C Descargando $R Spayer"
+	echo -e "$G @@@@@@@@@@@@@@@@@@@@@@"
+	echo
+
+
+
+mkdir -p $HOME/Cesar
+cd $HOME/Cesar
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/CesarHackGray)
+chmod 777 CesarHackGray
+
+	echo $(clear)
+
+cd $HOME/Cesar
+	
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/.Spayer)
+ 
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/.CesarHackGray)
+
+	echo $(clear)
+	sleep 3
+	echo -e "$G *********************"
+	echo -e "$C Empaquetando Spayer"
+	echo -e "$G *********************"
+	echo
+	sleep 3
+
+cd $HOME/Cesar
+
+
+
+mv $HOME/Spayer_in_Termux $HOME/Cesar
+
+./CesarHackGray -v -f .CesarHackGray
+./CesarHackGray -v -f .Spayer
+./CesarHackGray -v -f Spayer_in_Termux
+
+mv $HOME/Cesar/.CesarHackGray.x $HOME/Spayer/César
+mv $HOME/Spayer/César/.CesarHackGray.x $HOME/Spayer/César/.CesarHackGray
+mv $HOME/Cesar/Spayer.x $HOME/Spayer
+mv $HOME/Spayer/.Spayer.x $HOME/Spayer/.Spayer
+mv $HOME/Cesar/Spayer_in_Termux.x $HOME
+mv $HOME/Spayer_in_Termux.x $HOME/Spayer_in_Termux
+
+cp $HOME/Spayer/.Spayer $PREFIX/bin
+
+
+	echo $(clear)
+	echo 
+	sleep 3
+	echo -e "$G +++++++++++++++++++++++"
+	echo -e "$C Accediendo a metasploit"
+	echo -e "$G +++++++++++++++++++++++"
+	sleep 3
+	echo
+
+cd $HOME/metasploit-framework/lib/msf/core/payload
+mv apk.rb apk.rb.0
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/apk.rb1)
+mv apk.rb1 apk.rb
+
+	echo $(clear)
+
+	echo $(wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/Cesar.rb)
+
+	echo $(clear)
+	echo 
+	sleep 5
+	echo -e "$C 19281919293382999997819192"
+	echo -e "$G Listooo! Espera un momento"
+	echo -e "$C 10292829201029347483992292"
+	echo
+	sleep 2
+
+echo -e "$C cd ../usr/lib"
+sleep 2
+echo -e "$C rm -rf libtermux-exec.so"
+cd $HOME
+cd ../usr/lib
+rm -rf libtermux-exec.so
+
+	sleep 4
+	echo $(clear)
+	echo
+	echo
+	echo
+	echo
+	echo
+	echo
+	echo
+	echo "      	_        _"
+	echo "         / \__   _(_)___  ___"
+	echo "        / _ \ \ / / / __|/ _ \\"
+	echo "       / ___ \ V /| \__ \ (_) |"
+	echo "      /_/   \_\_/ |_|___/\___/"
+	echo
+	echo -e "$C Si ya no te corre Termux espera 1 minuto"
+	echo -e "$C hay un script que impide que Spayer corra"
+	echo -e "$C No se te borrara nada de lo que tengas en termux"
+	echo -e "$C Espera 1 o 2 minutos para que el script"
+	echo -e "$C se regenera nuevamente esto debiado ha"
+	echo -e "$C que Spayer corre en 32 bits y no en 34 bits"
+	echo -e "$C se esta arreglando espera 1 o 2 minutos att.. Cesar"
+	echo
+	echo
+printf "$C Presiona en $G enter $C para $G continuar"
+read enter
+
+
+	echo
+	echo $(clear)
+	sleep 1
+	echo
+	echo
+echo -e "$R"
+	echo "           ____"
+	echo "          / ___| _ __   __ _ _   _  ___ _ __"
+	echo "          \___ \|  _ \ / _  | | | |/ _ \  __|"
+	echo "           ___) | |_) | (_| | |_| |  __/ |"
+	echo "          |____/| .__/ \__,_|\__, |\___|_|"
+	echo "                |_|          |___/"
+	rm -rf $HOME/Spayer/Spayer_install
+	echo -e "$Y Cesar"
+	sleep 1
+	echo -e "$Y Hack"
+	sleep 1
+	echo -e "$Y Gray"
+	echo
+	sleep 2
+	echo -e "$C puede ser usado satisfactoriamente"
+	echo
+	echo
+	echo
+	echo
+	echo
+sleep 2
+
+
