@@ -130,7 +130,8 @@ chmod +x $HOME/Injector/Injector
 
 
 touch $HOME/Injector/signapk
-echo "#!data/data/com.termux/files/usr/bin/bash" >> $HOME/Injector/signapkecho "cd $HOME/Injector/Cesar" >> $HOME/Injector/signapk
+echo "#!data/data/com.termux/files/usr/bin/bash" >> $HOME/Injector/signapk
+echo "cd $HOME/Injector/Cesar" >> $HOME/Injector/signapk
 echo "cd $HOME/Injector/Gray" >> $HOME/Injector/signapk
 echo "cd $HOME/Injector" >> $HOME/Injector/signapk
 
@@ -267,7 +268,6 @@ clear
 	echo
 	echo -e "$C el que invento el injector y lo compilo >> $Y Cesar Hack Gray"
 
-mv $HOME/Injector/CesarGray.x $HOME/Injector/CesarGray
 rm -rf $HOME/Injecting
 echo
 echo
