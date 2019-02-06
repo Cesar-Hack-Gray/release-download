@@ -250,12 +250,12 @@ printf "\n$G ::::::::::::::: Cargandoooo Metasploit :::::::::::::::$W"
 	if [ -e $PREFIX/bin/msfconsole ] && [ -e $PREFIX/bin/msfvenom ]; then
 		echo
 		cd $HOME/metasploit-framework
-		printf "$Y Intentamos correr msfconsole$W"
+		printf "$Y Intentamos correr msfconsole\n$G"
 		msfconsole
 	else
 		echo
 		cd $HOME/metasploit-framework
-		printf "$Y Intentamos correr msfconsole$W"
+		printf "$Y Intentamos correr msfconsole\n$G"
                 ruby msfconsole
 	fi
 echo "
