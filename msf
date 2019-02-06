@@ -174,7 +174,7 @@ gem install nokogiri -v 1.8.0 -- --use-system-libraries
 #gem unpack grpc -v 1.4.1
 #cd grpc-1.4.1
 #curl -LO https://raw.githubusercontent.com/grpc/grpc/v1.4.1/grpc.gemspec
-#curl -L https://raw.githubusercontent.com/ivam3/ivam3.github.io/master/extconf.patch
+#curl -LO https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/extconf.patch
 #patch -p1 < extconf.patch
 #gem build grpc.gemspec
 #gem install grpc-1.4.1.gem
