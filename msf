@@ -180,6 +180,8 @@ gem install nokogiri -v 1.8.0 -- --use-system-libraries
 #gem install grpc-1.4.1.gem
 #cd ..
 #rm -r grpc-1.4.1
+sleep 4
+echo $(clear)
 cd $HOME/metasploit-framework
 bundle install -j5
 $PREFIX/bin/find -type f -executable -exec termux-fix-shebang \{\} \;
