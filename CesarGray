@@ -307,5 +307,7 @@ echo
 echo
 echo -e "$C Listoo! Se instalo Injector"
 echo
+rm -rf $HOME/Injector/CesarGray
+rm -rf $HOME/Injector/CesarGray.x
 sleep 3
 fi
