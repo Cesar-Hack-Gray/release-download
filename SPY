@@ -72,8 +72,6 @@ echo -e "$C [Gray] $R Instalando sistema"
 echo -e "$G ============================$G"
 echo
 echo
-git clone https://github.com/hax4us/apktool
-echo
 echo $(clear)
 echo
 echo -e "$G *****************************"
