@@ -245,7 +245,7 @@ rm -rf $HOME/data/data/com.termux/files/home/metasploit-framework/lib/msf/core/p
 rm -rf $HOME/modulos
 cd $HOME
 git clone https://github.com/Cesar-Hack-Gray/modulos
-mv $HOME/modulos $HOME/data/data/com.termux/files/home/metasploit-framework/lib/msf/core/payload
+mv ~/modulos ~/metasploit-framework/lib/msf/core/payload
 
 $(clear)
 echo
