@@ -246,7 +246,7 @@ class Msf::Payload::Apk
     print_status "Rebuilding #{apkfile} with meterpreter injection as #{injected_apk}\n"
     print_status "Nota, Hola soy Cesar Hack Gray, recuerda no me ago responsable del mal uso que le brindes a esta herramienta"
     print_status "Injector y Spade son mis herramientas att.. Cesar"
-    run_cmd("apktool b --aapt $HOME/java/openjdk/bin/aapt -o #{injected_apk} #{tempdir}/original")
+    run_cmd("apktool b --aapt $PREFIX/bin/aapt -o #{injected_apk} #{tempdir}/original")
     unless File.readable?(injected_apk)
       raise RuntimeError, "Unable to rebuild apk with apktool"
     end
