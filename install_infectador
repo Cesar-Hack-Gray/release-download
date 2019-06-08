@@ -1,0 +1,36 @@
+#!/bin/bash
+apt update &>> install.log
+
+if [ -e /data/data/com.termux/files/usr/bin ]; then
+
+if [ -e $PREFIX/lib/apktool.jar ]; then
+rm $PREFIX/lib/apktool.jar
+fi
+if [ -e $PREFIX/bin/apktool ]; then
+rm $PREFIX/bin/apktool
+fi
+if [ -e $PREFIX/bin/dalvikvm ]; then
+sed -i "s/export/#export/g" $PREFIX/bin/dalvikvm
+fi
+cd $HOME/infectador-framework
+
+wget https://raw.githubusercontent.com/Cesar-Hack-Gray/infectador-framework/master/apktool &>> install.log
+wget https://raw.githubusercontent.com/Cesar-Hack-Gray/infectador-framework/master/apktool.jar &>> install.log
+
+mv $HOME/infectador-framework/apktool $PREFIX/bin/
+mv $HOME/infectador-framework/apktool.jar $PREFIX/lib/
+chmod 700 $PREFIX/bin/apktool
+chmod 700 $PREFIX/lib/apktool.jar
+if [ -e /data/data/com.termux/files/home/metasploit-framework ]; then
+Cesar='/data/data/com.termux/files/home/metasploit-framework'
+fi
+if [ -e /data/data/com.termux/files/usr/opt/metasploit-framework ]; then
+Cesar='/data/data/com.termux/files/usr/opt/metasploit-framework'
+fi
+if [ -e $Cesar/lib/msf/core/payload/apk.rb ]; then
+mv $Cesar/lib/msf/core/payload/apk.rb $Cesar/lib/msf/core/payload/apk.rb.0
+wget https://raw.githubusercontent.com/Cesar-Hack-Gray/release-download/master/apk.rb &>> install.log
+fi
+else
+apt update &>> install.log
+fi
