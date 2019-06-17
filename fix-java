@@ -1,0 +1,26 @@
+#!/bin/bash
+
+rm -rf ~/java
+cd ~
+git clone https://github.com/Cesar-Hack-Gray/java-8
+mv ~/java-8 ~/java
+cd ~
+wget https://github.com/Cesar-Hack-Gray/codigos/raw/master/codigos2/armhf/arm/jdk8_arm.tar.gz
+mv jdk8_arm.tar.gz $PREFIX/share
+cd $PREFIX/share
+tar -xhf jdk8_arm.tar.gz
+rm -rf $PREFIX/bin/apktool
+rm -rf $PREFIX/bin/java
+
+
+cp $HOME/java/.Gray/apktool $PREFIX/bin/
+chmod 700 $PREFIX/bin/apktool
+cp $HOME/java/openjdk/apktool_jar/apktool-2.2.2.jar $PREFIX/var/spool/apktool.jar
+cp $HOME/java/openjdk/lib/libc++_shared.so $PREFIX/share/glib/
+mv bin/* $PREFIX/bin
+rm -rf $PREFIX/share/bin
+chmod 711 $PREFIX/share/jdk8/man/ja_JP.UTF-8/man1/*
+mv $PREFIX/share/jdk8/bin/java $PREFIX/share/jdk8/bin/java.O
+cp $HOME/java/openjdk/bin/java $PREFIX/share/jdk8/bin/
+chmod 700 /data/data/com.termux/files/usr/share/jdk8/bin/java
+
