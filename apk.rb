@@ -161,10 +161,10 @@ class Msf::Payload::Apk
       raise RuntimeError, "zipalign not found. If it's not in your PATH, please add it."
     end
 
-    apktool = run_cmd("apktool -version")
-    unless apktool != nil
-      raise RuntimeError, "apktool not found. If it's not in your PATH, please add it."
-    end
+    #apktool = run_cmd("apktool -version")
+    #unless apktool != nil
+      #raise RuntimeError, "apktool not found. If it's not in your PATH, please add it."
+    #end
 
     apk_v = Gem::Version.new(apktool)
     unless apk_v >= Gem::Version.new('2.0.1')
