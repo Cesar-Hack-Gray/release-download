@@ -273,7 +273,7 @@ class Msf::Payload::Apk
     end
 
     print_status "Signing #{injected_apk}\n"
-    run_cmd("psignapk .bind/output.apk .bind/aligned.apk")
+    run_cmd("apksigner -p CesarHackGray autokey ~/parrot-fs/root/.bind/output.apk ~/parrot-fs/root/.bind/aligned.apk")
     #print_status "Now..goto parrot and Recompile..\n"
     #run_cmd("zipalign 4 #{injected_apk} #{aligned_apk}")
 
