@@ -166,10 +166,10 @@ class Msf::Payload::Apk
       #raise RuntimeError, "apktool not found. If it's not in your PATH, please add it."
     #end
 
-    apk_v = Gem::Version.new(apktool)
-    unless apk_v >= Gem::Version.new('2.0.1')
-      raise RuntimeError, "apktool version #{apk_v} not supported, please download at least version 2.0.1."
-    end
+    #apk_v = Gem::Version.new(apktool)
+    #unless apk_v >= Gem::Version.new('2.0.1')
+      #raise RuntimeError, "apktool version #{apk_v} not supported, please download at least version 2.0.1."
+    #end
 
     #Create temporary directory where work will be done
     tempdir = Dir.mktmpdir
