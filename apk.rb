@@ -140,11 +140,11 @@ class Msf::Payload::Apk
     return orig_cert_data
   end
 
-  def backdoor_apk(apkfile, raw_payload)
-    unless apkfile && File.readable?(apkfile)
-      usage
-      raise RuntimeError, "Invalid template: #{apkfile}"
-    end
+  #def backdoor_apk(apkfile, raw_payload)
+    #unless apkfile && File.readable?(apkfile)
+      #usage
+      #raise RuntimeError, "Invalid template: #{apkfile}"
+    #end
 
     #keytool = run_cmd("keytool")
     #unless keytool != nil
