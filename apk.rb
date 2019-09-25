@@ -271,7 +271,7 @@ class Msf::Payload::Apk
     end
 
     print_status "Signing #{injected_apk}\n"
-    run_cmd("jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore #{keystore} -storepass #{storepass} -keypass #{keypass} #{injected_apk} #{keyalias}")
+    #run_cmd("jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore #{keystore} -storepass #{storepass} -keypass #{keypass} #{injected_apk} #{keyalias}")
     print_status "Aligning #{injected_apk}\n"
     run_cmd("apksigner -p CesarHackGray autokey #{injected_apk} #{aligned_apk}")
 
