@@ -264,7 +264,7 @@ class Msf::Payload::Apk
     fix_manifest(tempdir, package, classes['MainService'], classes['MainBroadcastReceiver'])
 
     print_status "Rebuilding #{apkfile} with meterpreter injection as #{injected_apk}\n"
-    apktool_output = run_cmd("apktool b -o #{injected_apk} #{tempdir}/original")
+    apktool_output = run_cmd("apktool b #{tempdir}/original -o #{tempdir}/output.apk)
     unless File.readable?(injected_apk)
       print_error apktool_output
       raise RuntimeError, "Unable to rebuild apk with apktool"
@@ -273,7 +273,7 @@ class Msf::Payload::Apk
     print_status "Signing #{injected_apk}\n"
     #run_cmd("jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore #{keystore} -storepass #{storepass} -keypass #{keypass} #{injected_apk} #{keyalias}")
     print_status "Aligning #{injected_apk}\n"
-    run_cmd("zipalign 4 #{injected_apk} #{aligned_apk}")
+    run_cmd("zipalign 4 #{tempdir}/output.apk #{aligned_apk}")
 
     outputapk = File.read(aligned_apk)
 
