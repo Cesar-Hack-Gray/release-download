@@ -271,15 +271,15 @@ class Msf::Payload::Apk
     end
 
     print_status "Signing #{injected_apk}\n"
-    #run_cmd("jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore #{keystore} -storepass #{storepass} -keypass #{keypass} #{injected_apk} #{keyalias}")
-    print_status "Aligning #{injected_apk}\n"
-    run_cmd("zipalign 4 #{tempdir}/output.apk #{aligned_apk}")
+    run_cmd("apksigner -p android keystore #{tempdir}/output.apk #{tempdir}/aligned.apk")
+    #print_status "Now..goto parrot and Recompile..\n"
+    #run_cmd("zipalign 4 #{injected_apk} #{aligned_apk}")
 
     outputapk = File.read(aligned_apk)
+    run_cmd("rm -rf #{tempdir}/*")
 
-    FileUtils.remove_entry tempdir
+    #FileUtils.remove_entry tempdir
     outputapk
   end
 end
-
 
